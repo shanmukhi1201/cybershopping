@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+      <div class="bgimg">
+        <form
+          action=""
+          id="form"
+          name="myform"
+          onsubmit="return validateform()"
+        >
+          <h2 style="font-size: 25px" align="center">Login Form</h2>
+          <label for="" style="font-size: larger">Username</label>
+          <br />
+          <input type="text" name="username" placeholder="Enter Username" />
+          <br />
+          <br />
+          <br />
+
+          <label for="" style="font-size: larger">Password</label>
+          <br />
+          <input
+            type="password"
+            name="password"
+            id=""
+            placeholder="Enter Password"
+          />
+          <br />
+          <br />
+
+          <div class="button" align="center">
+            <button type="submit">Submit</button>
+          </div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+        </form>
+    </div>
+    <script>
+      function validateform() {
+        var name = document.myform.username.value;
+        var password = document.myform.password.value;
+
+        if (name == null || name == "") {
+          alert("Username Can't be blank please enter username");
+          return false;
+        } else if (password.length < 6) {
+          alert(
+            "Password should not be empty and must be at least 6 characters long."
+          );
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
